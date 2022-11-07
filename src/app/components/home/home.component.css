@@ -1,0 +1,30 @@
+.container {
+  margin: auto;
+  text-align: center;
+  width: max-content;
+  padding: 15vh 0 0;
+  background-color: #FF9526;
+}
+
+mat-button-toggle {
+  font-size: 6px;
+  font-family: "Emulogic";
+  background-color: #EF4423;
+  border: none;
+}
+
+.mat-raised-button {
+  padding: 20px;
+  margin: 25px 0;
+  font-family: "Emulogic";
+  font-size: 18px;
+  background-color: #EF4423;
+}
+
+mat-label {
+  font-size: 10px;
+}
+
+mat-form-field {
+  margin: 40px 0;
+}

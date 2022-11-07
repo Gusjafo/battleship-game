@@ -1,0 +1,46 @@
+<div class="container">
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>User select</mat-label>
+      <mat-select disableRipple>
+        <mat-option (click)="setDataForTable(usr)" *ngFor="let usr of usrNames" [value]="usr">{{usr}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+
+      <ng-container matColumnDef="timeStart">
+        <th mat-header-cell *matHeaderCellDef> Start </th>
+        <td mat-cell *matCellDef="let element"> {{ element.timeStart | date:'medium'}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="timeEnd">
+        <th mat-header-cell *matHeaderCellDef> End </th>
+        <td mat-cell *matCellDef="let element"> {{ element.timeEnd | date:'medium' }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="attemptsUsed">
+        <th mat-header-cell *matHeaderCellDef> Attempts </th>
+        <td mat-cell *matCellDef="let element"> {{ element.attemptsUsed }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="acuracy">
+        <th mat-header-cell *matHeaderCellDef> Accuracy </th>
+        <td mat-cell *matCellDef="let element"> {{ element.acuracy | percent }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef> Status </th>
+        <td mat-cell *matCellDef="let element">
+          <span (click)="replayGame(element.id)" [ngStyle]="{'color': element.status === 'unfinished'?'blue':'white'}">
+            {{ element.status }}
+          </span>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>

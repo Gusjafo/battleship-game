@@ -1,0 +1,108 @@
+.container {
+  margin: auto;
+  text-align: center;
+  width: max-content;
+  /* padding: 10px; */
+  background-color: #FF9526;
+}
+
+mat-button-toggle {
+  font-size: 6px;
+  font-family: "Emulogic";
+}
+
+.mat-button-toggle-appearance-standard {
+  background: #f88b16;
+}
+
+.mat-button-toggle-checked {
+  background: #EF4423;
+}
+
+.mat-raised-button {
+  padding: 20px;
+  margin: 25px 0;
+  font-family: "Emulogic";
+  font-size: 18px;
+  background-color: #EF4423;
+}
+
+.example-radio-group {
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0;
+  align-items: flex-start;
+  font-family: "Emulogic";
+  font-size: 18px;
+}
+
+.example-radio-button {
+  margin: 5px;
+  font-family: "Emulogic";
+  font-size: 12px;
+}
+
+.mat-radio-button~.mat-radio-button {
+  margin-left: 16px;
+}
+
+
+/* mat-icon-stepper selected color change  */
+::ng-deep .mat-step-header .mat-step-icon-selected,
+.mat-step-header .mat-step-icon-state-done,
+.mat-step-header .mat-step-icon-state-edit {
+  background-color: red !important;
+}
+
+mat-form-field {
+  padding: 20px 0;
+}
+
+/* input outline color */
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: red !important;
+  /* opacity: 1!important; */
+}
+
+/* mat-input focused color */
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: red !important;
+}
+
+/* mat-input error outline color */
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick {
+  color: red !important;
+  opacity: 0.8 !important;
+}
+
+/* mat-input carent color */
+::ng-deep .mat-input-element {
+  caret-color: red !important;
+}
+
+/* mat-input error carent color */
+::ng-deep .mat-form-field-invalid .mat-input-element,
+.mat-warn .mat-input-element {
+  caret-color: red !important;
+}
+
+/* mat-label normal state style */
+::ng-deep .mat-form-field-label {
+  color: rgba(0, 0, 0, .6) !important;
+  /* color: $mainColor!important; */
+}
+
+/* mat-label focused style */
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: red !important;
+}
+
+/* mat-label error style */
+::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+  color: red !important;
+}
+
+input {
+  font-family: "Emulogic";
+  font-size: 18px;
+}

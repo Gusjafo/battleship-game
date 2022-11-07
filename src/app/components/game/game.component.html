@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="left">
+    <div *ngFor="let cell of cells">{{cell}}</div>
+  </div>
+  <div class="right">
+    <span *ngFor="let number of rows">{{number}}</span>
+    <div *ngFor="let axisY of grid">
+      <button *ngFor="let axisX of axisY" [ngClass]="{'spot-on': axisX === -1? true : false,
+      'failed-attempt': axisX === -2? true : false,
+      'ship-is-sunk': axisX === -3? true : false}" (click)="enemyFire(axisX)">
+      </button>
+    </div>
+  </div>
+</div>
+<div class="elements">
+  <mat-divider></mat-divider>
+  <button mat-raised-button (click)="saveGame('unfinished')">SAVE</button>
+  <p class="attempts">
+    {{attemptsCount}}
+  </p>
+</div>
+<!-- <div>
+  <span routerLink="/app-setup" class="myIcon">
+  </span>
+</div> -->
+<div *ngIf="win" class="won">
+  <h1>YOU WON</h1>
+</div>
+<div *ngIf="lost" class="lost">
+  <h1>YOU LOST</h1>
+</div>

@@ -1,0 +1,124 @@
+.container {
+  display: flex;
+  margin: 30px auto 0;
+  width: max-content;
+  padding: 10px;
+  background-color: #FF9526;
+}
+
+.elements {
+  display: flex;
+  width: max-content;
+  margin: 0 auto 5px;
+  text-align: center;
+}
+
+.left {
+  margin-top: 6px;
+  padding: 16px 0;
+  color: white;
+}
+
+.left div {
+  padding: 12px;
+}
+
+
+mat-button-toggle-group {
+  margin-left: 12px;
+}
+
+button {
+  background-color: #eee;
+  border: none;
+  cursor: pointer;
+  color: black;
+  font-size: 1.2rem;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
+}
+
+button:hover {
+  background-color: rgb(241, 229, 9);
+  color: white;
+}
+
+button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: auto;
+}
+
+.spot-on {
+  background-color: rgb(254, 0, 0);
+}
+
+.failed-attempt {
+  background-color: rgb(87, 183, 242);
+}
+
+.ship-is-sunk {
+  background-color: rgb(0, 0, 0);
+}
+
+span {
+  display: inline-block;
+  color: white;
+  height: 25px;
+  width: 40px;
+}
+
+span:first-of-type {
+  padding-left: 8px;
+}
+
+
+.myIcon {
+  background-image: url('./../../../assets/icons/settings_FILL1_wght400_GRAD0_opsz48.svg');
+  background-size: 30px;
+  width: 20px;
+  height: 30px;
+  position: absolute;
+  top: 1vh;
+  right: 1vw;
+}
+
+.myIcon:hover {
+  cursor: pointer;
+}
+
+.mat-raised-button {
+  padding: 10px 45px;
+  margin: 15px 0 0 20px;
+  height: auto;
+  width: auto;
+  font-family: "Emulogic";
+  font-size: 18px;
+  background-color: #fc8814;
+}
+
+.mat-raised-button:hover {
+  background-color: #EF4423;
+}
+
+.attempts {
+  padding: 10px 45px;
+  margin: 15px 0 0 20px;
+  height: auto;
+  width: auto;
+  font-family: "Emulogic";
+  font-size: 26px;
+  background-color: #fc8814;
+  border-radius: 1px solid black;
+}
+
+.won,
+.lost {
+  position: absolute;
+  top: 20vh;
+  left: 40%;
+}
+
+
