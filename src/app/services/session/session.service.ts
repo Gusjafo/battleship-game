@@ -58,15 +58,6 @@ export class SessionService {
     }
   }
 
-  setUsrSessionName(name: string) {
-    console.log(name)
-    this.actualSession.userName = name;
-  }
-
-  setUsrAtteptsConfig(value: number) {
-    this.actualSession.attemptsSelection = value
-  }
-
   setMusicStatus(value: boolean) {
     if (value) {
       this.audioSound.play();

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { GameService } from 'src/app/services/game/game.service';
 import { SessionService } from 'src/app/services/session/session.service';
 
 @Component({
@@ -20,19 +21,15 @@ export class SetupComponent implements OnInit {
   attemptsValue: number = (this.attempts.map(a => a).filter(b => b.checked))[0].value;
   musicOn: boolean = false;
   soundOn: boolean = false;
-  sessionTemp: any;
 
   constructor(
+    private gameService: GameService,
     private session: SessionService,
     private router: Router,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
-    this.sessionTemp = JSON.parse(localStorage.getItem('sessionHistorical')!);
-    if (this.sessionTemp != undefined) {
-      this.session.sessionsHistorical = this.sessionTemp;
-    }
     this.musicOn = this.session.actualSession.musicOn;
     this.soundOn = this.session.actualSession.soundsOn;
     this.nameStored = this.session.actualSession.userName;
@@ -62,8 +59,11 @@ export class SetupComponent implements OnInit {
       this.getErrorMessage()
     }
     else {
-      this.session.setUsrSessionName(this.name.value!)
-      this.session.setUsrAtteptsConfig(this.attemptsValue);
+      this.session.actualSession.gridStatus = this.gameService.gridGenerator();
+      this.session.actualSession.navalFleetStatus = this.gameService.setNavalFleetData();
+      this.session.actualSession.userName = this.name.value!;
+      this.session.actualSession.attemptsSelection = this.attemptsValue;
+      localStorage.setItem('sessionActual', JSON.stringify(this.session.actualSession));    
       this.router.navigate(['/app-game'], { relativeTo: this.route });
     }
   }

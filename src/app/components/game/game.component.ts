@@ -31,6 +31,7 @@ export class GameComponent implements OnInit {
   lost: boolean = false;
   hitCounter: number = 0;
   sessionTemp: any;
+  sessionActualTemp: any;
 
 
   constructor(
@@ -51,13 +52,18 @@ export class GameComponent implements OnInit {
       this.grid = this.session.actualSession.gridStatus;
       this.navalFleetData = this.session.actualSession.navalFleetStatus;
       this.attemptsCount = this.session.actualSession.attemptsUsed;
-      this.session.setMusicStatus(this.session.actualSession.musicOn)
+      this.session.setMusicStatus(this.session.actualSession.musicOn);
     }
     else {
-      this.user = this.session.actualSession.userName
-      this.openSnackBar(`Let's go ${this.user}`)
-      this.grid = this.gameService.gridGenerator();
-      this.navalFleetData = this.gameService.setNavalFleetData();
+      this.sessionActualTemp = JSON.parse(localStorage.getItem('sessionActual')!);
+      if (this.sessionActualTemp != undefined) {
+        this.session.actualSession = this.sessionActualTemp;
+      }
+      this.user = this.session.actualSession.userName;
+      this.openSnackBar(`Let's go ${this.user}`);
+      this.grid = this.session.actualSession.gridStatus;
+      this.attemptsCount = this.session.actualSession.attemptsUsed;
+      this.navalFleetData = this.session.actualSession.navalFleetStatus;
     }
   }
 
@@ -86,7 +92,7 @@ export class GameComponent implements OnInit {
           this.grid = this.gameService.setGridCell(cordinates, -1, this.grid)
           elem.isDamaged[onTarget] = true;
           // ship is sunk
-          if (!elem.isDamaged.includes(false)) {            
+          if (!elem.isDamaged.includes(false)) {
             this.boatAfloat--;
             this.session.playSound('onTarget');
             this.openSnackBar('on target')
@@ -119,18 +125,16 @@ export class GameComponent implements OnInit {
         flag = !flag
       }
     }
-    localStorage.setItem('sessionActual', JSON.stringify(this.session.actualSession));    
+    this.saveValuesOnSessionActual();
+    localStorage.setItem('sessionActual', JSON.stringify(this.session.actualSession));
   }
 
   saveGame(mje: string) {
-    this.session.actualSession.acuracy = (this.hitCounter/this.attemptsCount);
+    this.saveValuesOnSessionActual();
     this.session.actualSession.status = mje;
-    this.session.actualSession.navalFleetStatus = this.navalFleetData;
-    this.session.actualSession.gridStatus = this.grid;
-    this.session.actualSession.attemptsUsed = this.attemptsCount;
-    this.session.sessionsHistorical.push(this.session.actualSession);
     this.session.actualSession.timeEnd = new Date();
-    localStorage.setItem('sessionActual', JSON.stringify(this.session.actualSession));
+    localStorage.removeItem('sessionActual');
+    this.session.sessionsHistorical.push(this.session.actualSession);
     localStorage.setItem('sessionHistorical', JSON.stringify(this.session.sessionsHistorical));
     this.router.navigate(['/app-welcome']).then(() => {
       window.location.reload();
@@ -142,8 +146,15 @@ export class GameComponent implements OnInit {
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition,
       panelClass: 'snackbar',
-      duration: 5000,
+      duration: 2000,
     });
+  }
+
+  saveValuesOnSessionActual() {
+    this.session.actualSession.acuracy = (this.hitCounter / this.attemptsCount);
+    this.session.actualSession.navalFleetStatus = this.navalFleetData;
+    this.session.actualSession.gridStatus = this.grid;
+    this.session.actualSession.attemptsUsed = this.attemptsCount;
   }
 
 }
