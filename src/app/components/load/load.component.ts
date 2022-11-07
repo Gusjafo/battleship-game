@@ -19,37 +19,45 @@ export class LoadComponent implements OnInit {
   ];
   dataSource: SessionData[] = [];
 
-
-  constructor(private session: SessionService, private router: Router) { }
+  constructor(
+    private session: SessionService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.sessionTemp = JSON.parse(localStorage.getItem('sessionHistorical')!);
     if (this.sessionTemp != undefined) {
       this.session.sessionsHistorical = this.sessionTemp;
     }
-    console.log(this.session.sessionsHistorical)
-    this.sessionsHistorical = this.session.sessionsHistorical
-    this.getUsersNames()
+    this.sessionsHistorical = this.session.sessionsHistorical;
+    this.getUsersNames();
   }
 
   getUsersNames() {
-    this.usrNames = this.sessionsHistorical.map(a => a.userName)
-    this.usrNames = [...new Set(this.usrNames)]
+    this.usrNames = this.sessionsHistorical.map(a => a.userName);
+    this.usrNames = [...new Set(this.usrNames)];
   }
 
   setDataForTable(usr: string) {
     this.dataSource = [];
     this.sessionFilteredByUser = this.sessionsHistorical.map(a => a).filter(b => b.userName === usr);
     this.sessionFilteredByUser.forEach((elem: SessionData) => {
-      this.dataSource.push(elem)
+      this.dataSource.push(elem);
     })
   }
 
+  // move to game page
   replayGame(id: number) {
     this.session.actualSession = this.sessionFilteredByUser.map(a => a).filter(b => b.id === id)[0];
     if (this.session.actualSession.status === 'unfinished') {
       this.router.navigate(['/app-game/load']);
     }
+  }
+
+  deleteHistorical() {
+    localStorage.removeItem('sessionHistorical');
+    this.session.sessionsHistorical = [];
+    window.location.reload();
   }
 }
 

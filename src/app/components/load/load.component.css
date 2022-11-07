@@ -36,3 +36,31 @@
 span{
   cursor: pointer;
 }
+
+.home {
+  background-image: url('./../../../assets/icons/home_FILL1_wght400_GRAD0_opsz48.svg');
+  background-size: 30px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 2vh;
+  right: 2vw;
+}
+
+.home:hover {
+  cursor: pointer;
+}
+
+.delete {
+  background-image: url('./../../../assets/icons/delete_FILL1_wght400_GRAD0_opsz48.svg');
+  background-size: 30px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 9vh;
+  right: 2vw;
+}
+
+.delete:hover {
+  cursor: pointer;
+}

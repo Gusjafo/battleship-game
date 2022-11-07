@@ -67,6 +67,7 @@ export class GameComponent implements OnInit {
     }
   }
 
+  // action when click
   enemyFire(position: number) {
     if (!this.attemptsPosition.includes(position) && position != -1 && position != -2 && position != -3) {
       this.attemptsPosition.push(position);
@@ -76,39 +77,39 @@ export class GameComponent implements OnInit {
         this.lost = true;
         this.session.playSound('lost');
         setTimeout(() => {
-          this.saveGame('Lost')
+          this.saveGame('Lost');
         }, 5000);
       }
       let cordinates: number[] = [];
-      cordinates = [...position + ''].map(n => +n)
+      cordinates = [...position + ''].map(n => +n);
 
       let onTarget: number = -1;
-      let flag: boolean = false
+      let flag: boolean = false;
       this.navalFleetData.forEach((elem: NavalFleetData) => {
-        onTarget = elem.shipPosition.indexOf(position)
+        onTarget = elem.shipPosition.indexOf(position);
         // hit the bulls-eye
         if (onTarget != -1) {
           this.hitCounter++;
-          this.grid = this.gameService.setGridCell(cordinates, -1, this.grid)
+          this.grid = this.gameService.setGridCell(cordinates, -1, this.grid);
           elem.isDamaged[onTarget] = true;
           // ship is sunk
           if (!elem.isDamaged.includes(false)) {
             this.boatAfloat--;
             this.session.playSound('onTarget');
-            this.openSnackBar('on target')
+            this.openSnackBar('on target');
             // end game
             if (this.boatAfloat === 0) {
               this.win = true;
               this.session.playSound('win');
               setTimeout(() => {
-                this.saveGame('Won')
+                this.saveGame('Won');
               }, 8000);
             }
             setTimeout(() => {
               elem.shipPosition.forEach((elem: number) => {
                 cordinates = [];
-                cordinates = [...elem + ''].map(n => +n)
-                this.grid = this.gameService.setGridCell(cordinates, -3, this.grid)
+                cordinates = [...elem + ''].map(n => +n);
+                this.grid = this.gameService.setGridCell(cordinates, -3, this.grid);
               })
             }, 500);
           }
@@ -118,11 +119,11 @@ export class GameComponent implements OnInit {
       // failed attempt
       if (!flag) {
         this.session.playSound('water');
-        this.grid = this.gameService.setGridCell(cordinates, -2, this.grid)
+        this.grid = this.gameService.setGridCell(cordinates, -2, this.grid);
       }
       // hit the bulls-eye
       if (flag) {
-        flag = !flag
+        flag = !flag;
       }
     }
     this.saveValuesOnSessionActual();
@@ -146,7 +147,7 @@ export class GameComponent implements OnInit {
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition,
       panelClass: 'snackbar',
-      duration: 2000,
+      duration: 1500,
     });
   }
 

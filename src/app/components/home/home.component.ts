@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   }
 
   newGame() {
-    this.router.navigate(['/app-setup'], { relativeTo: this.route })
+    this.router.navigate(['/app-setup'], { relativeTo: this.route });
   }
 
 }

@@ -36,15 +36,15 @@ export class SetupComponent implements OnInit {
   }
 
   musicPlay(value: boolean) {
-    this.session.setMusicStatus(value)
+    this.session.setMusicStatus(value);
   }
 
   soundsOn(value: boolean) {
-    this.session.setSoundsStatus(value)
+    this.session.setSoundsStatus(value);
   }
 
   setDifficulty(selection: number) {
-    this.attemptsValue = selection
+    this.attemptsValue = selection;
   }
 
   getErrorMessage() {
@@ -54,16 +54,16 @@ export class SetupComponent implements OnInit {
     return this.name.hasError('name') ? 'Not a valid Name' : '';
   }
 
-  starGame() {
+  startGame() {
     if (this.name.status === 'INVALID') {
-      this.getErrorMessage()
+      this.getErrorMessage();
     }
     else {
       this.session.actualSession.gridStatus = this.gameService.gridGenerator();
       this.session.actualSession.navalFleetStatus = this.gameService.setNavalFleetData();
       this.session.actualSession.userName = this.name.value!;
       this.session.actualSession.attemptsSelection = this.attemptsValue;
-      localStorage.setItem('sessionActual', JSON.stringify(this.session.actualSession));    
+      localStorage.setItem('sessionActual', JSON.stringify(this.session.actualSession));
       this.router.navigate(['/app-game'], { relativeTo: this.route });
     }
   }

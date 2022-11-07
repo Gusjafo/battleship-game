@@ -14,12 +14,12 @@ export class WelcomeComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(() => {
-      this.goToItems()
-    }, 2000);
+      this.goToItems();
+    }, 2500);
   }
 
   goToItems() {
-    this.router.navigate(['/app-home'])
+    this.router.navigate(['/app-home']);
   }
 
 }

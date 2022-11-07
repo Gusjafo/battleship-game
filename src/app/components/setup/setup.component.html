@@ -1,20 +1,14 @@
 <h1>SETUP</h1>
 <div class="container">
-
   <h2>MUSIC
-    <mat-button-toggle-group 
-    (change)="musicPlay(musicOn)" 
-    [(ngModel)]="musicOn"
-    #group="matButtonToggleGroup">
+    <mat-button-toggle-group (change)="musicPlay(musicOn)" [(ngModel)]="musicOn" #group="matButtonToggleGroup">
       <mat-button-toggle [value]='true'>YES</mat-button-toggle>
       <mat-button-toggle [value]='false'>NO</mat-button-toggle>
     </mat-button-toggle-group>
   </h2>
   <h2>
     SOUND
-    <mat-button-toggle-group 
-    (change)="soundsOn(soundOn)" 
-    [(ngModel)]="soundOn">
+    <mat-button-toggle-group (change)="soundsOn(soundOn)" [(ngModel)]="soundOn">
       <mat-button-toggle [value]='true'>YES</mat-button-toggle>
       <mat-button-toggle [value]='false'>NO</mat-button-toggle>
     </mat-button-toggle-group>
@@ -38,5 +32,5 @@
     <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
   </mat-form-field>
   <mat-divider></mat-divider>
-  <button mat-raised-button (click)="starGame()">Start</button>
+  <button mat-raised-button (click)="startGame()">Start</button>
 </div>
