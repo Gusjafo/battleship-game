@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  newGame() {
+  newGame(): void {
     this.router.navigate(['/app-setup'], { relativeTo: this.route });
   }
 

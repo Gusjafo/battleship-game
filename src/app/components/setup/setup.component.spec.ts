@@ -1,4 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from "@angular/router/testing";
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { SetupComponent } from './setup.component';
 
@@ -8,9 +11,14 @@ describe('SetupComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SetupComponent ]
+      imports: [
+        RouterTestingModule,
+        MatButtonToggleModule,
+        MatSnackBarModule
+      ],
+      declarations: [SetupComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(SetupComponent);
     component = fixture.componentInstance;

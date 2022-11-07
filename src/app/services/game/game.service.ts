@@ -26,7 +26,7 @@ export class GameService {
   constructor() { }
 
   // grid generator
-  gridGenerator() {
+  gridGenerator(): number[][] {
     let gridAxisX: number[];
     this.grid = [];
     for (let y = 0; y < this.dimension; y++) {
@@ -40,7 +40,7 @@ export class GameService {
   }
 
   // random integer
-  getRandomInt(max: number) {
+  getRandomInt(max: number): number {
     return Math.floor(Math.random() * max);
   }
 
@@ -112,7 +112,7 @@ export class GameService {
   }
 
   // set status of naval fleet
-  setNavalFleetStatus(position: number[], name: string) {
+  setNavalFleetStatus(position: number[], name: string): void {
     this.navalFleetData.push({
       shipName: name,
       shipPosition: position,
@@ -150,10 +150,6 @@ export class GameService {
       grid[0][cordinates[0]] = value
     }
     return grid;
-  }
-
-  gameWon(){
-
   }
 
 }

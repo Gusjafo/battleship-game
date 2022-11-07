@@ -34,7 +34,7 @@ export class SessionService {
     this.lost.load();
   }
 
-  playSound(name: string) {
+  playSound(name: string): void {
     if (this.actualSession.soundsOn) {
       switch (name) {
         case 'shoot':
@@ -58,7 +58,7 @@ export class SessionService {
     }
   }
 
-  setMusicStatus(value: boolean) {
+  setMusicStatus(value: boolean): void {
     if (value) {
       this.audioSound.play();
       this.actualSession.musicOn = true;
@@ -69,7 +69,7 @@ export class SessionService {
     }
   }
 
-  setSoundsStatus(value: boolean) {
+  setSoundsStatus(value: boolean): void {
     if (value) {
       this.actualSession.soundsOn = true;
     }

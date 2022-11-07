@@ -47,14 +47,14 @@ export class SetupComponent implements OnInit {
     this.attemptsValue = selection;
   }
 
-  getErrorMessage() {
+  getErrorMessage():string|null {
     if (this.name.hasError('required')) {
       return 'enter an alias of at least 3 characters';
     }
     return this.name.hasError('name') ? 'Not a valid Name' : '';
   }
 
-  startGame() {
+  startGame():void {
     if (this.name.status === 'INVALID') {
       this.getErrorMessage();
     }

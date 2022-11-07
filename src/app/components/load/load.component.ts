@@ -33,12 +33,12 @@ export class LoadComponent implements OnInit {
     this.getUsersNames();
   }
 
-  getUsersNames() {
+  getUsersNames(): void {
     this.usrNames = this.sessionsHistorical.map(a => a.userName);
     this.usrNames = [...new Set(this.usrNames)];
   }
 
-  setDataForTable(usr: string) {
+  setDataForTable(usr: string): void {
     this.dataSource = [];
     this.sessionFilteredByUser = this.sessionsHistorical.map(a => a).filter(b => b.userName === usr);
     this.sessionFilteredByUser.forEach((elem: SessionData) => {
@@ -47,14 +47,14 @@ export class LoadComponent implements OnInit {
   }
 
   // move to game page
-  replayGame(id: number) {
+  replayGame(id: number): void {
     this.session.actualSession = this.sessionFilteredByUser.map(a => a).filter(b => b.id === id)[0];
     if (this.session.actualSession.status === 'unfinished') {
       this.router.navigate(['/app-game/load']);
     }
   }
 
-  deleteHistorical() {
+  deleteHistorical(): void {
     localStorage.removeItem('sessionHistorical');
     this.session.sessionsHistorical = [];
     window.location.reload();

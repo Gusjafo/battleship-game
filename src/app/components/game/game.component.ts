@@ -68,7 +68,7 @@ export class GameComponent implements OnInit {
   }
 
   // action when click
-  enemyFire(position: number) {
+  enemyFire(position: number): void {
     if (!this.attemptsPosition.includes(position) && position != -1 && position != -2 && position != -3) {
       this.attemptsPosition.push(position);
       this.session.playSound('shoot');
@@ -130,7 +130,7 @@ export class GameComponent implements OnInit {
     localStorage.setItem('sessionActual', JSON.stringify(this.session.actualSession));
   }
 
-  saveGame(mje: string) {
+  saveGame(mje: string): void {
     this.saveValuesOnSessionActual();
     this.session.actualSession.status = mje;
     this.session.actualSession.timeEnd = new Date();
@@ -142,7 +142,7 @@ export class GameComponent implements OnInit {
     });
   }
 
-  openSnackBar(message: string) {
+  openSnackBar(message: string): void {
     this.snackBar.open(message, '', {
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition,
@@ -151,7 +151,7 @@ export class GameComponent implements OnInit {
     });
   }
 
-  saveValuesOnSessionActual() {
+  saveValuesOnSessionActual(): void {
     this.session.actualSession.acuracy = (this.hitCounter / this.attemptsCount);
     this.session.actualSession.navalFleetStatus = this.navalFleetData;
     this.session.actualSession.gridStatus = this.grid;

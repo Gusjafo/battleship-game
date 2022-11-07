@@ -18,7 +18,7 @@ export class WelcomeComponent implements OnInit {
     }, 2500);
   }
 
-  goToItems() {
+  goToItems(): void {
     this.router.navigate(['/app-home']);
   }
 
