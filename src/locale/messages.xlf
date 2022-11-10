@@ -79,20 +79,6 @@
           <context context-type="linenumber">1</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3732781016943244617" datatype="html">
-        <source>MUSIC <x id="START_TAG_MAT_BUTTON_TOGGLE_GROUP" ctype="x-mat_button_toggle_group" equiv-text="&lt;mat-button-toggle-group (change)=&quot;musicPlay(musicOn)&quot; [(ngModel)]=&quot;musicOn&quot; #group=&quot;matButtonToggleGroup&quot;&gt;"/><x id="START_TAG_MAT_BUTTON_TOGGLE" ctype="x-mat_button_toggle" equiv-text="&lt;mat-button-toggle [value]=&apos;true&apos;&gt;"/>YES<x id="CLOSE_TAG_MAT_BUTTON_TOGGLE" ctype="x-mat_button_toggle" equiv-text="&lt;/mat-button-toggle&gt;"/><x id="START_TAG_MAT_BUTTON_TOGGLE_1" ctype="x-mat_button_toggle_1" equiv-text="&lt;mat-button-toggle [value]=&apos;false&apos;&gt;"/>NO<x id="CLOSE_TAG_MAT_BUTTON_TOGGLE" ctype="x-mat_button_toggle" equiv-text="&lt;/mat-button-toggle&gt;"/><x id="CLOSE_TAG_MAT_BUTTON_TOGGLE_GROUP" ctype="x-mat_button_toggle_group" equiv-text="&lt;/mat-button-toggle-group&gt;"/></source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/setup/setup.component.html</context>
-          <context context-type="linenumber">3,7</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8940848776452584501" datatype="html">
-        <source> SOUND <x id="START_TAG_MAT_BUTTON_TOGGLE_GROUP" ctype="x-mat_button_toggle_group" equiv-text="&lt;mat-button-toggle-group (change)=&quot;soundsOn(soundOn)&quot; [(ngModel)]=&quot;soundOn&quot;&gt;"/><x id="START_TAG_MAT_BUTTON_TOGGLE" ctype="x-mat_button_toggle" equiv-text="&lt;mat-button-toggle [value]=&apos;true&apos; &gt;"/>YES<x id="CLOSE_TAG_MAT_BUTTON_TOGGLE" ctype="x-mat_button_toggle" equiv-text="&lt;/mat-button-toggle&gt;"/><x id="START_TAG_MAT_BUTTON_TOGGLE_1" ctype="x-mat_button_toggle_1" equiv-text="&lt;mat-button-toggle [value]=&apos;false&apos;&gt;"/>NO<x id="CLOSE_TAG_MAT_BUTTON_TOGGLE" ctype="x-mat_button_toggle" equiv-text="&lt;/mat-button-toggle&gt;"/><x id="CLOSE_TAG_MAT_BUTTON_TOGGLE_GROUP" ctype="x-mat_button_toggle_group" equiv-text="&lt;/mat-button-toggle-group&gt;"/></source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/setup/setup.component.html</context>
-          <context context-type="linenumber">9,14</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="2286469247189679862" datatype="html">
         <source>DIFFICULTY:</source>
         <context-group purpose="location">

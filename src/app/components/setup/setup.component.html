@@ -1,12 +1,12 @@
 <h1 i18n>SETUP</h1>
 <div class="container">
-  <h2 i18n>MUSIC
+  <h2>MUSIC
     <mat-button-toggle-group (change)="musicPlay(musicOn)" [(ngModel)]="musicOn" #group="matButtonToggleGroup">
       <mat-button-toggle [value]='true'>YES</mat-button-toggle>
       <mat-button-toggle [value]='false'>NO</mat-button-toggle>
     </mat-button-toggle-group>
   </h2>
-  <h2 i18n>
+  <h2>
     SOUND
     <mat-button-toggle-group (change)="soundsOn(soundOn)" [(ngModel)]="soundOn">
       <mat-button-toggle [value]='true' >YES</mat-button-toggle>
