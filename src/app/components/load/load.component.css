@@ -33,7 +33,7 @@
   font-size: 16px;
 }
 
-span{
+span {
   cursor: pointer;
 }
 
@@ -45,6 +45,7 @@ span{
   position: absolute;
   top: 2vh;
   right: 2vw;
+  padding: 0;
 }
 
 .home:hover {
@@ -63,4 +64,47 @@ span{
 
 .delete:hover {
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .mat-cell {
+    padding: 3px 4px;
+    font-size: 4px;
+  }
+
+  .mat-header-cell {
+    padding: 3px 4px;
+    font-size: 8px;
+  }
+
+  .home {
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+    top: 2vh;
+    right: 2vw;
+  }
+
+  .delete {
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+    top: 6vh;
+    right: 2vw;
+  }
+
+  .demo-table {
+    width: 94vw;
+    height: max-content;
+    margin: 0px;
+    font-family: "Verdana";
+    font-weight: normal;
+    background: #f88b16;
+  }
+
+  .container {
+    align-items: flex-start;
+    padding: 4px;
+    margin: 2px;
+  }
 }

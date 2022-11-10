@@ -122,3 +122,32 @@ span:first-of-type {
 }
 
 
+@media (max-width: 600px) {
+
+  button {
+    font-size: 1.2rem;
+    height: 25px;
+    width: 25px;
+    border: 1px solid black;
+  }
+
+  span {
+    height: 20px;
+    width: 25px;
+    font-size: 10px;
+  }
+  
+  span:first-of-type {
+    padding-left: 2px;
+  }
+
+  .left {
+    margin-top: 8px;
+    padding: 8px 0;
+  }
+  
+  .left div {
+    padding: 4px;
+  }
+}
+
