@@ -1,22 +1,22 @@
-<h1>SETUP</h1>
+<h1 i18n>SETUP</h1>
 <div class="container">
-  <h2>MUSIC
+  <h2 i18n>MUSIC
     <mat-button-toggle-group (change)="musicPlay(musicOn)" [(ngModel)]="musicOn" #group="matButtonToggleGroup">
       <mat-button-toggle [value]='true'>YES</mat-button-toggle>
       <mat-button-toggle [value]='false'>NO</mat-button-toggle>
     </mat-button-toggle-group>
   </h2>
-  <h2>
+  <h2 i18n>
     SOUND
     <mat-button-toggle-group (change)="soundsOn(soundOn)" [(ngModel)]="soundOn">
-      <mat-button-toggle [value]='true'>YES</mat-button-toggle>
+      <mat-button-toggle [value]='true' >YES</mat-button-toggle>
       <mat-button-toggle [value]='false'>NO</mat-button-toggle>
     </mat-button-toggle-group>
   </h2>
   <mat-divider></mat-divider>
   <div>
     <h2>
-      <label id="example-radio-group-label">DIFFICULTY:</label>
+      <label i18n id="example-radio-group-label">DIFFICULTY:</label>
     </h2>
     <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
       <mat-radio-button (change)="setDifficulty(attempt.value)" class="example-radio-button"
@@ -27,10 +27,10 @@
   </div>
   <mat-divider></mat-divider>
   <mat-form-field appearance="outline">
-    <mat-label mat-form-field-label for="alias">Enter your Name/Alias</mat-label>
+    <mat-label i18n mat-form-field-label for="alias">Enter your Name/Alias</mat-label>
     <input matInput placeholder="John" [(ngModel)]="nameStored" [formControl]="name" id="alias" autofocus required>
     <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
   </mat-form-field>
   <mat-divider></mat-divider>
-  <button mat-raised-button (click)="startGame()">Start</button>
+  <button i18n mat-raised-button (click)="startGame()">Start</button>
 </div>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="7246684935885666477" datatype="html">
+        <source>YOU WON</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/game/game.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6486853282263136382" datatype="html">
+        <source>YOU LOST</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/game/game.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2604206684694635523" datatype="html">
+        <source>NEW GAME</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="180626373108098773" datatype="html">
+        <source>LOAD GAME</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7698207514847953580" datatype="html">
+        <source>User select</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/load/load.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5107530057766197526" datatype="html">
+        <source> Start </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/load/load.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6278389610811475090" datatype="html">
+        <source> End </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/load/load.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="985123397487920661" datatype="html">
+        <source> Attempts </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/load/load.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7908661247595968283" datatype="html">
+        <source> Accuracy </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/load/load.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4282587102956396340" datatype="html">
+        <source> Status </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/load/load.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3119596725788894513" datatype="html">
+        <source>SETUP</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/setup/setup.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3732781016943244617" datatype="html">
+        <source>MUSIC <x id="START_TAG_MAT_BUTTON_TOGGLE_GROUP" ctype="x-mat_button_toggle_group" equiv-text="&lt;mat-button-toggle-group (change)=&quot;musicPlay(musicOn)&quot; [(ngModel)]=&quot;musicOn&quot; #group=&quot;matButtonToggleGroup&quot;&gt;"/><x id="START_TAG_MAT_BUTTON_TOGGLE" ctype="x-mat_button_toggle" equiv-text="&lt;mat-button-toggle [value]=&apos;true&apos;&gt;"/>YES<x id="CLOSE_TAG_MAT_BUTTON_TOGGLE" ctype="x-mat_button_toggle" equiv-text="&lt;/mat-button-toggle&gt;"/><x id="START_TAG_MAT_BUTTON_TOGGLE_1" ctype="x-mat_button_toggle_1" equiv-text="&lt;mat-button-toggle [value]=&apos;false&apos;&gt;"/>NO<x id="CLOSE_TAG_MAT_BUTTON_TOGGLE" ctype="x-mat_button_toggle" equiv-text="&lt;/mat-button-toggle&gt;"/><x id="CLOSE_TAG_MAT_BUTTON_TOGGLE_GROUP" ctype="x-mat_button_toggle_group" equiv-text="&lt;/mat-button-toggle-group&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/setup/setup.component.html</context>
+          <context context-type="linenumber">3,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8940848776452584501" datatype="html">
+        <source> SOUND <x id="START_TAG_MAT_BUTTON_TOGGLE_GROUP" ctype="x-mat_button_toggle_group" equiv-text="&lt;mat-button-toggle-group (change)=&quot;soundsOn(soundOn)&quot; [(ngModel)]=&quot;soundOn&quot;&gt;"/><x id="START_TAG_MAT_BUTTON_TOGGLE" ctype="x-mat_button_toggle" equiv-text="&lt;mat-button-toggle [value]=&apos;true&apos; &gt;"/>YES<x id="CLOSE_TAG_MAT_BUTTON_TOGGLE" ctype="x-mat_button_toggle" equiv-text="&lt;/mat-button-toggle&gt;"/><x id="START_TAG_MAT_BUTTON_TOGGLE_1" ctype="x-mat_button_toggle_1" equiv-text="&lt;mat-button-toggle [value]=&apos;false&apos;&gt;"/>NO<x id="CLOSE_TAG_MAT_BUTTON_TOGGLE" ctype="x-mat_button_toggle" equiv-text="&lt;/mat-button-toggle&gt;"/><x id="CLOSE_TAG_MAT_BUTTON_TOGGLE_GROUP" ctype="x-mat_button_toggle_group" equiv-text="&lt;/mat-button-toggle-group&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/setup/setup.component.html</context>
+          <context context-type="linenumber">9,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2286469247189679862" datatype="html">
+        <source>DIFFICULTY:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/setup/setup.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7329495305279193928" datatype="html">
+        <source>Enter your Name/Alias</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/setup/setup.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5162686434580248853" datatype="html">
+        <source>Start</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/setup/setup.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3045523018766859841" datatype="html">
+        <source>Welcome to</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/welcome/welcome.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="960740503867907774" datatype="html">
+        <source>Battleship Game</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/welcome/welcome.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
